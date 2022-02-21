@@ -1,0 +1,24 @@
+captainVersion: 4
+services:
+    $$cap_appname:
+        environment:
+            HTTP_PORT: 80
+            SERVER: quake.joel.cyou
+caproverOneClickApp:
+    variables:
+        - id: '$$cap_myapp_version'
+          label: quake
+          defaultValue: '1'
+          description: quake
+          validRegex:
+    instructions:
+        start: |-
+            Installing
+        end: |-
+            Finished installing
+
+            $$cap_appname
+    displayName: quake
+    isOfficial: false ## Only if all images used here are official or from a trusted source.
+    description: quake
+    documentation: This docker-compose is taken from https://github.com/treyyoder/quakejs-docker
